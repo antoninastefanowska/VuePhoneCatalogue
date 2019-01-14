@@ -1,0 +1,329 @@
+﻿{
+	"phones": [
+		{
+			"id": 0,
+			"name": "Sony Xperia M",
+			"model": "C1905",
+			"brandID": 0,
+			"releaseYear": 2013,
+			"releaseMonth": 8,
+			"typeID": 0,
+			"keyboard": false,
+			"sizeInch": 4.0,
+			"touchscreen": true,
+			"simID": 0,
+			"dualsim": false,
+			"memoryCardID": 1,
+			"memoryMB": 4096,
+			"ramMB": 1024,
+			"operatingSystem": 0,
+			"operatingSystemVersion": 4.3,
+			"chipset": "Qualcomm Snapdragon S4 Plus MSM8227",
+			"cpuGHz": 1.0,
+			"cores": 2,
+			"batterymAH": 1750,
+			"cameraMP": 5,
+			"cameraLED": true,
+			"radio": true,
+			"communicationIDs": [0, 1, 2, 3],
+			"sensorIDs": [0, 1, 2]
+		},
+		{
+			"id": 1,
+			"name": "Iphone 7",
+			"model": "---",
+			"brandID": 1,
+			"releaseYear": 2016,
+			"releaseMonth": 9,
+			"typeID": 0,
+			"keyboard": false,
+			"sizeInch": 4.7,
+			"touchscreen": true,
+			"simID": 1,
+			"dualsim": false,
+			"memoryCardID": 0,
+			"memoryMB": 32768,
+			"ramMB": 2048,
+			"operatingSystemID": 1,
+			"operatingSystemVersion": 10.3,
+			"chipset": "Apple A10 Fusion",
+			"cpuGHz": 2.34,
+			"cores": 4,
+			"batterymAH": 1960,
+			"cameraMP": 12,
+			"cameraLED": true,
+			"radio": false,
+			"communicationIDs": [0, 1, 2, 3],
+			"sensorIDs": [0, 1, 2, 3, 4, 5]
+		},
+		{
+			"id": 2,
+			"name": "Samsung Galaxy S Duos",
+			"model": "GT-S7562",
+			"brandID": 2,
+			"releaseYear": 2012,
+			"releaseMonth": 9,
+			"typeID": 0,
+			"keyboard": false,
+			"sizeInch": 4.0,
+			"touchscreen": true,
+			"simID": 2,
+			"dualsim": true,
+			"memoryCardID": 1,
+			"memoryMB": 4096,
+			"ramMB": 768,
+			"operatingSystemID": 0,
+			"operatingSystemVersion": 4.0,
+			"chipset": "Qualcomm MSM7227A Snapdragon S1",
+			"cpuGHz": 1.0,
+			"cores": 1,
+			"batterymAH": 1500,
+			"cameraMP": 5,
+			"cameraLED": true,
+			"radio": true,
+			"communicationIDs": [0, 1, 2],
+			"sensorIDs": [0, 1, 2]
+		},
+		{
+			"id": 3,
+			"name": "Meizu M3 Note",
+			"model": "Note3",
+			"brandID": 3,
+			"releaseYear": 2016,
+			"releaseMonth": 4,
+			"typeID": 0,
+			"keyboard": false,
+			"sizeInch": 5.5,
+			"touchscreen": true,
+			"simID": 1,
+			"dualsim": true,
+			"memoryCardID": 1,
+			"memoryMB": 16384,
+			"ramMB": 2048,
+			"operatingSystemID": 0,
+			"operatingSystemVersion": 5.1,
+			"chipset": "Mediatek MT6755 Helio P10",
+			"cpuGHz": 1.8,
+			"cores": 8,
+			"batterymAH": 4100,
+			"cameraMP": 13,
+			"cameraLED": true,
+			"radio": true,
+			"communicationIDs": [0, 1, 2],
+			"sensorIDs": [0, 1, 2, 3, 4]
+		},
+		{
+			"id": 4,
+			"name": "Honor 5X",
+			"model": "---",
+			"brandID": 4,
+			"releaseYear": 2015,
+			"releaseMonth": 11,
+			"typeID": 0,
+			"keyboard": false,
+			"sizeInch": 5.5,
+			"touchscreen": true,
+			"simID": 0,
+			"dualsim": true,
+			"memoryCardID": 1,
+			"memoryMB": 16384,
+			"ramMB": 2048,
+			"operatingSystemID": 0,
+			"operatingSystemVersion": 6.0,
+			"chipset": "Qualcomm MSM8939v2 Snapdragon 616",
+			"cpuGHz": 1.5,
+			"cores": 8,
+			"batterymAH": 3000,
+			"cameraMP": 13,
+			"cameraLED": true,
+			"radio": true,
+			"communicationIDs": [0, 1, 2],
+			"sensorIDs": [0, 1, 2, 3]
+		},
+		{
+			"id": 5,
+			"name": "BlackBerry Pearl Flip",
+			"model": "8230",
+			"brandID": 5,
+			"releaseYear": 2009,
+			"releaseMonth": 5,
+			"typeID": 1,
+			"keyboard": true,
+			"sizeInch": 2.6,
+			"touchscreen": false,
+			"simID": 2,
+			"dualsim": false,
+			"memoryCardID": 1,
+			"memoryMB": 128,
+			"ramMB": 128,
+			"operatingSystemID": 2,
+			"operatingSystemVersion": 4.6,
+			"chipset": "Intel XScale PXA272",
+			"cpuGHz": 0.312,
+			"cores": 1,
+			"batterymAH": 900,
+			"cameraMP": 2,
+			"cameraLED": true,
+			"radio": false,
+			"communicationIDs": [2],
+			"sensorIDs": []
+		},
+		{
+			"id": 6,
+			"name": "BlackBerry Passport",
+			"model": "---",
+			"brandID": 5,
+			"releaseYear": 2014,
+			"releaseMonth": 9,
+			"typeID": 0,
+			"keyboard": true,
+			"sizeInch": 4.5,
+			"touchscreen": true,
+			"simID": 1,
+			"dualsim": false,
+			"memoryCardID": 1,
+			"memoryMB": 32768,
+			"ramMB": 3072,
+			"operatingSystemID": 2,
+			"operatingSystemVersion": "10.3",
+			"chipset": "Qualcomm MSM8974AAA Snapdragon 801",
+			"cpuGHz": 2.26,
+			"cores": 4,
+			"batterymAH": 3450,
+			"cameraMP": 13,
+			"cameraLED": true,
+			"radio": true,
+			"communicationIDs": [0, 1, 2, 3],
+			"sensorIDs": [0, 1, 2, 4]
+		}
+	],
+	"brands": 
+	[
+        {
+            "id": 0,
+            "name": "Sony"
+        },
+        {
+            "id": 1,
+            "name": "Apple"
+        },
+		{
+			"id": 2,
+			"name": "Samsung"
+		},
+		{
+			"id": 3,
+			"name": "Meizu"
+		},
+		{
+			"id": 4,
+			"name": "Huawei"
+		},
+		{
+			"id": 5,
+			"name": "BlackBerry"
+		}
+    ],
+	"types": 
+	[
+        {
+            "id": 0,
+            "name": "bar"
+		},
+		{
+			"id": 1,
+			"name": "clamshell"
+		}
+    ],
+	"sims":
+	[
+        {
+            "id": 0,
+            "name": "Micro-SIM"
+        },
+        {
+            "id": 1,
+            "name": "Nano-SIM"
+		},
+		{
+			"id": 2,
+			"name": "Mini-SIM"
+		}
+    ],
+
+	"memoryCards":
+	[
+        {
+            "id": 0,
+            "name": "none"
+        },
+        {
+            "id": 1,
+            "name": "microSD"
+        }
+    ],
+
+	"operatingSystems": 
+	[
+        {
+            "id": 0,
+            "name": "Android"
+        },
+        {
+            "id": 1,
+            "name": "iOS"
+		},
+		{
+			"id": 2,
+			"name": "BlackBerryOS"
+		}
+    ],
+    
+	"communications": 
+	[
+        {
+            "id": 0,
+            "name": "WLAN"
+        },
+        {
+            "id": 1,
+            "name": "GPS"
+        },
+        {
+            "id": 2,
+            "name": "Bluetooth"
+        },
+        {
+            "id": 3,
+            "name": "NFC"
+        }
+    ],
+
+	"sensors": 
+	[
+        {
+            "id": 0,
+            "name": "Accelerometer"
+        },
+        {
+            "id": 1,
+            "name": "Proximity"
+        },
+        {
+            "id": 2,
+            "name": "Compass"
+		},
+		{
+			"id": 3,
+			"name": "Fingerprint"
+		},
+		{
+			"id": 4,
+			"name": "Gyroscope"
+		},
+		{
+			"id": 5,
+			"name": "Barometer"
+		}
+    ]
+}
