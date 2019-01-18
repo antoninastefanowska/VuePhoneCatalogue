@@ -31,34 +31,47 @@ class Phone
 
     get brand() 
     { 
-        if (Data.instance.brands[this.brandID])
-            return Data.instance.brands[this.brandID];
+        let brand = Data.instance.brands[this.brandID];
+        if (brand)
+            return brand;
         else
             return new Brand(); 
     }
 
     get type()
     {
-        if (Data.instance.types[this.typeID]) 
-            return Data.instance.type[this.typeID];
+        let type = Data.instance.types[this.typeID];
+        if (type) 
+            return type;
         else
             return new Type();
     }
 
     get sim() 
     {
-        if (Data.instance.sims[this.simID]) 
-            return Data.instance.sims[this.simID];
+        let sim = Data.instance.sims[this.simID];
+        if (sim) 
+            return sim;
         else
             return new Sim(); 
     }
 
     get memoryCard() 
     {
-        if (Data.instance.memoryCards[this.memoryCardID]) 
-            return Data.instance.memoryCards[this.memoryCardID];
+        let memoryCard = Data.instance.memoryCards[this.memoryCardID];
+        if (memoryCard) 
+            return memoryCard;
         else
             return new MemoryCard();
+    }
+
+    get operatingSystem() 
+    {
+        let operatingSystem = Data.instance.operatingSystems[this.operatingSystemID]; 
+        if (operatingSystem)
+            return operatingSystem;
+        else
+            return new OperatingSystem(); 
     }
 
     get communications()
@@ -72,12 +85,10 @@ class Phone
     get sensors()
     {
         var sensors = [];
-        for (let i = 0; i < this.sensorIDs; i++)
+        for (let i = 0; i < this.sensorIDs.length; i++)
             sensors.push(Data.instance.sensors[this.sensorIDs[i]]);
         return sensors;
     }
-
-    get operatingSystem() { return Data.instance.operatingSystems[this.operatingSystemID]; }
 
     static compareAttribute(phone1, phone2, attributeName)
     {

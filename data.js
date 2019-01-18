@@ -20,6 +20,7 @@ class Data
         this.communications = [];
         this.sensors = [];
         this.currentTemplate = "";
+        this.loadData();
     }
 
     static arrayToClassInstances(array, prototype)
@@ -78,20 +79,5 @@ class Data
                 Data.arrayToClassInstances(this.sensors, Sensor.prototype);
             })
             .catch(error => { });
-    }
-
-    loadTemplate(route) 
-    {
-        switch (route)
-        {
-            case '/':
-            case '/phones':
-            axios.get('/phone_list.html')
-                .then(response => {
-                    this.currentTemplate = response.data;
-                })
-                .catch(error => { })
-            break;
-        }
     }
 }
