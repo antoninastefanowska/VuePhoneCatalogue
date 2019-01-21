@@ -1,4 +1,3 @@
-
 const router = new VueRouter({
     routes: [
         { path: '/', component: httpVueLoader('./components/phone_list.vue') },

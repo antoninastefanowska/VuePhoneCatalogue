@@ -31,7 +31,7 @@ class Phone
 
     get brand() 
     { 
-        let brand = Data.instance.brands[this.brandID];
+        let brand = Database.instance.brands[this.brandID];
         if (brand)
             return brand;
         else
@@ -40,7 +40,7 @@ class Phone
 
     get type()
     {
-        let type = Data.instance.types[this.typeID];
+        let type = Database.instance.types[this.typeID];
         if (type) 
             return type;
         else
@@ -49,7 +49,7 @@ class Phone
 
     get sim() 
     {
-        let sim = Data.instance.sims[this.simID];
+        let sim = Database.instance.sims[this.simID];
         if (sim) 
             return sim;
         else
@@ -58,7 +58,7 @@ class Phone
 
     get memoryCard() 
     {
-        let memoryCard = Data.instance.memoryCards[this.memoryCardID];
+        let memoryCard = Database.instance.memoryCards[this.memoryCardID];
         if (memoryCard) 
             return memoryCard;
         else
@@ -67,7 +67,7 @@ class Phone
 
     get operatingSystem() 
     {
-        let operatingSystem = Data.instance.operatingSystems[this.operatingSystemID]; 
+        let operatingSystem = Database.instance.operatingSystems[this.operatingSystemID]; 
         if (operatingSystem)
             return operatingSystem;
         else
@@ -78,7 +78,7 @@ class Phone
     {
         var communications = [];
         for (let i = 0; i < this.communicationIDs.length; i++)
-            communications.push(Data.instance.communications[this.communicationIDs[i]]);
+            communications.push(Database.instance.communications[this.communicationIDs[i]]);
         return communications;
     }
 
@@ -86,7 +86,7 @@ class Phone
     {
         var sensors = [];
         for (let i = 0; i < this.sensorIDs.length; i++)
-            sensors.push(Data.instance.sensors[this.sensorIDs[i]]);
+            sensors.push(Database.instance.sensors[this.sensorIDs[i]]);
         return sensors;
     }
 
@@ -145,6 +145,15 @@ class OperatingSystem
 }
 
 class Communication
+{
+    constructor()
+    {
+        this.id = -1;
+        this.name = "";
+    }
+}
+
+class Sensor
 {
     constructor()
     {

@@ -14,7 +14,7 @@
 <script>
     module.exports = {
         data() {
-            return Data.instance;
+            return Database.instance;
         },
 
         computed: {
