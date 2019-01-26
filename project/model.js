@@ -92,9 +92,53 @@ class Phone
 
     static compareAttribute(phone1, phone2, attributeName)
     {
-        switch (attributeName)
+        if (attributeName === "sensors" || attributeName === "communications")
         {
-            // ...
+            if (phone1[attributeName].length > phone2[attributeName].length)
+                return 1;
+            else if (phone1[attributeName].length < phone2[attributeName].length)
+                return -1;
+            else
+                return 0;
+        }
+        else if (attributeName === "release")
+        {
+            if (phone1.releaseYear > phone2.releaseYear)
+                return 1;
+            else if (phone1.releaseYear < phone2.releaseYear)
+                return -1;
+            else
+            {
+                if (phone1.releaseMonth > phone2.releaseMonth)
+                    return 1;
+                else if (phone1.releaseMonth < phone2.releaseMonth)
+                    return -1;
+                else
+                    return 0;
+            }
+        }
+        else if (attributeName === 'operatingSystemVersion')
+        {
+            if (phone1.operatingSystemID === phone2.operatingSystemID)
+            {
+                if (phone1.operatingSystemVersion > phone2.operatingSystemVersion)
+                    return 1;
+                else if (phone1.operatingSystemVersion < phone2.operatingSystemVersion)
+                    return -1;
+                else
+                    return 0;
+            }
+            else
+                return 0;
+        }
+        else
+        {
+            if (phone1[attributeName] > phone2[attributeName])
+                return 1;
+            else if (phone1[attributeName] < phone2[attributeName])
+                return -1;
+            else
+                return 0;
         }
     }
 }

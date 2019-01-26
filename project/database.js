@@ -36,10 +36,14 @@ class Database
 
     static arrayToDictionary(array)
     {
+        /*
         let result = array.reduce(function(map, object) {
             map[object.id] = object;
             return map;
-        }, {});
+        }, {}); */
+        let result = [];
+        for (let i = 0; i < array.length; i++)
+            result[array[i].id] = array[i];
         array = result;
     }
 
@@ -112,6 +116,27 @@ class Database
 
         axios.post(Database.BASE_URL + '/phones', phone)
             .then(response => {
+                let phone = response.data;
+                Database.objectToClassInstance(phone, Phone.prototype);
+                this.phones.push(phone);
+                //this.phones[phone.id] = phone;
+            })
+            .catch(error => { console.log(error); });
+    }
+
+    deletePhone(id)
+    {
+        axios.delete(Database.BASE_URL + '/phones/' + id)
+            .then(() => {
+                this.phones.splice(id);
+            })
+            .catch(error => { console.log(error); });
+    }
+
+    editPhone(phone)
+    {
+        axios.put(Database.BASE_URL + '/phones/' + phone.id, phone)
+            .then((response) => {
                 let phone = response.data;
                 Database.objectToClassInstance(phone, Phone.prototype);
                 this.phones[phone.id] = phone;
