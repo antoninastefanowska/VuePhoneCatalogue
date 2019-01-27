@@ -347,6 +347,10 @@
     {
       "id": 3,
       "name": "NFC"
+    },
+    {
+      "name": "Podczerwień",
+      "id": 4
     }
   ],
   "sensors": [

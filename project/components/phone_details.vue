@@ -1,7 +1,6 @@
 <template>
     <div class="container-tabledetails add">
         <table>
-            <caption>{{currentPhone.name}}</caption>
             <tr>
                 <th>Nazwa</th>
                 <td>{{currentPhone.name}}</td>

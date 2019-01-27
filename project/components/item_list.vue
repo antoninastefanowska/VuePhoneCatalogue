@@ -12,19 +12,14 @@
                             Nazwa
                             <input type="button" @click="sortByName" value="▼" class="sortButton">
                         </th>
-                        <th class="column3">
-                            Marka
-                            <input type="button" @click="sortByBrand" value="▼" class="sortButton">
-                        </th>
                         <th class="column4"></th>
                         <th class="column5"></th>
                         <th class="column6"></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr is="phonelistitem" v-for="phone in phones" :key="phone.id" :phone="phone" />
+                    <tr is="itemlistitem" v-for="item in items" :key="item.id" :item="item" :item_type="itemType" />
                     <tr>
-                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -43,27 +38,26 @@
             return {
                 database: Database.instance,
                 sortedByName: false,
-                sortedByBrand: false,
                 sortedByID: true
             }
         },
 
+        props: {
+            itemType: {
+                required: true
+            }
+        },
+
         computed: {
-            phones() {
-                let phones = this.database.phones;
-                if (this.$route.query.name)
-                    phones = phones.filter(phone => phone.name.toLowerCase().includes(this.$route.query.name.toLowerCase()));
-                if (this.$route.query.brandID >= 0)
-                    phones = phones.filter(phone => phone.brandID === this.$route.query.brandID);
+            items() {
+                let items = this.database[this.itemType];
 
                 if (this.sortedByName)
-                    return phones.slice().sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
-                else if (this.sortedByBrand)
-                    return phones.slice().sort((a, b) => a.brand.name.toLowerCase().localeCompare(b.brand.name.toLowerCase()));
+                    return items.slice().sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
                 else if (this.sortedByID)
-                    return phones.slice().sort((a, b) => a.id > b.id);
+                    return items.slice().sort((a, b) => a.id > b.id);
                 else
-                    return phones;
+                    return items;
             }
         },
 
@@ -71,28 +65,20 @@
             sortByName() {
                 this.sortedByName = true;
                 this.sortedByID = false;
-                this.sortedByBrand = false;
-            },
-
-            sortByBrand() {
-                this.sortedByBrand = true;
-                this.sortedByName = false;
-                this.sortedByID = false;
             },
 
             sortByID() {
                 this.sortedByID = true;
-                this.sortedByBrand = false;
                 this.sortedByName = false;
             },
 
             add() {
-                this.$router.push('/phones/add');
+                this.$router.push('/' + this.itemType + '/add');
             }
         },
 
         components: { 
-            phonelistitem: httpVueLoader('./phone_list_item.vue')
+            itemlistitem: httpVueLoader('./item_list_item.vue')
         }
     };
 </script>

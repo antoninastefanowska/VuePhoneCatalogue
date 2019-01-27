@@ -1,8 +1,7 @@
 <template>
     <form @submit.prevent="editMode ? edit() : add()">
         <div class="container-tabledetails add">
-            <table >
-                <caption>Nowy telefon</caption>
+            <table>
                 <tr>
                     <th>Nazwa</th>
                     <td><input type="text" v-model="currentPhone.name"></td>

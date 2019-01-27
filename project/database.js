@@ -110,16 +110,12 @@ class Database
     addPhone(phone)
     {
         phone.id = this.phones.length;
-        //let keys = Object.keys(this.phones);
-        //phone.id = parseInt(keys[keys.length - 1]) + 1;
-        //console.log(phone.id);
 
         axios.post(Database.BASE_URL + '/phones', phone)
             .then(response => {
                 let phone = response.data;
                 Database.objectToClassInstance(phone, Phone.prototype);
                 this.phones.push(phone);
-                //this.phones[phone.id] = phone;
             })
             .catch(error => { console.log(error); });
     }
@@ -140,6 +136,60 @@ class Database
                 let phone = response.data;
                 Database.objectToClassInstance(phone, Phone.prototype);
                 this.phones[phone.id] = phone;
+            })
+            .catch(error => { console.log(error); });
+    }
+
+    static getClassPrototype(itemType)
+    {
+        switch (itemType)
+        {
+            case 'brands':
+                return Brand.prototype;
+            case 'types':
+                return Type.prototype;
+            case 'sims':
+                return Sim.prototype;
+            case 'memoryCards':
+                return MemoryCard.prototype;
+            case 'operatingSystem':
+                return OperatingSystem.prototype;
+            case 'communications':
+                return Communication.prototype;
+            case 'sensors':
+                return Sensor.prototype;
+        }
+    }
+
+    addItem(item, itemType)
+    {
+        item.id = this[itemType].length;
+
+        axios.post(Database.BASE_URL + '/' + itemType, item)
+            .then(response => {
+                let item = response.data;
+                Database.objectToClassInstance(item, Database.getClassPrototype(itemType));
+                this[itemType].push(item);
+            })
+            .catch(error => { console.log(error); });
+    }
+
+    deleteItem(id, itemType)
+    {
+        axios.delete(Database.BASE_URL + '/' + itemType + '/' + id)
+            .then(() => {
+                this[itemType].splice(id);
+            })
+            .catch(error => { console.log(error); });
+    }
+
+    editItem(item, itemType)
+    {
+        axios.put(Database.BASE_URL + '/' + itemType + '/' + item.id, item)
+            .then((response) => {
+                let item = response.data;
+                Database.objectToClassInstance(item, Database.getClassPrototype(itemType));
+                this[itemType][item.id] = item;
             })
             .catch(error => { console.log(error); });
     }
