@@ -96,7 +96,7 @@ table td, table th {
 }
 
 .column1 {
-  width: 60px;
+  width: 100px;
   padding-left: 40px;
 }
 
@@ -123,6 +123,18 @@ table td, table th {
   text-align: center;
   text-decoration: none;          
   font-size: 14px;
+  font: bold;
+}
+
+.sortButton {
+  background-color: #36304a; 
+  border: 1px solid rgb(219, 226, 219);
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;          
+  font-size: 14px;
+  margin: 2px;
   font: bold;
 }
 

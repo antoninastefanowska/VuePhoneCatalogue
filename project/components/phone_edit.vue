@@ -24,7 +24,29 @@
                 </tr>
                 <tr>
                     <th>Data wypuszczenia</th>
-                    <td><input type="date"></td>
+                    <td>
+                        <select v-model="currentPhone.releaseMonth">
+                            <option disabled value="-1">Wybierz miesiąc</option>
+                            <option value="1">styczeń</option>
+                            <option value="2">luty</option>
+                            <option value="3">marzec</option>
+                            <option value="4">kwiecień</option>
+                            <option value="5">maj</option>
+                            <option value="6">czerwiec</option>
+                            <option value="7">lipiec</option>
+                            <option value="8">sierpień</option>
+                            <option value="9">wrzesień</option>
+                            <option value="10">październik</option>
+                            <option value="11">listopad</option>
+                            <option value="12">grudzień</option>
+                        </select>
+                        <select v-model="currentPhone.releaseYear">
+                            <option disabled value="-1">Wybierz rok</option>
+                            <option v-for="number in range(1990, 2019)" :key="number" :value="number">
+                                {{ number }}
+                            </option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <th>Typ</th>
@@ -201,6 +223,13 @@
             edit() {
                 this.database.editPhone(this.currentPhone);
                 this.$router.push('/phones');
+            },
+
+            range(start, end) {
+                let array = [];
+                for (let i = start; i <= end; i++)
+                    array.push(i);
+                return array;
             }
         },
 
