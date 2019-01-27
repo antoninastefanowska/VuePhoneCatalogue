@@ -26,7 +26,7 @@
                 <td>{{currentPhone.keyboard}}</td>
             </tr>
             <tr>
-                <th>Przekątna ekranu</th>
+                <th>Przekątna ekranu [cale]</th>
                 <td>{{currentPhone.sizeInch}}</td>
             </tr>
             <tr>

@@ -34,7 +34,9 @@
             },
 
             remove() {
-                this.database.deletePhone(this.phone.id);
+                let result = confirm('Czy na pewno chcesz usunąć telefon ' + this.phone.name + '?');
+                if (result)
+                    this.database.deletePhone(this.phone.id);
             }
         }
     }

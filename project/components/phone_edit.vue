@@ -68,8 +68,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>Przekątna ekranu</th>
-                    <td><input type="number" value="4" step="0.1" v-model="currentPhone.sizeInch" /></td>
+                    <th>Przekątna ekranu [cale]</th>
+                    <td><input type="number" value="4" step="0.1" min="0.5" v-model="currentPhone.sizeInch" /></td>
                 </tr>
                 <tr>
                     <th>Ekran dotykowy</th>
@@ -113,11 +113,11 @@
                 </tr>
                 <tr>
                     <th>Pamięć wewnętrzna [Mb]</th>
-                    <td><input type="number" value="1024" v-model="currentPhone.memoryMB"></td>
+                    <td><input type="number" value="1024" min="0" v-model="currentPhone.memoryMB"></td>
                 </tr>
                 <tr>
                     <th>Pamięć RAM [Mb]</th>
-                    <td><input type="number" value="1024" v-model="currentPhone.ramMB"></td>
+                    <td><input type="number" value="1024" min="0" v-model="currentPhone.ramMB"></td>
                 </tr>
                 <tr>
                     <th>System operacyjny</th>
@@ -132,7 +132,7 @@
                 </tr>
                 <tr>
                     <th>Wersja systemu operacyjnego</th>
-                    <td><input type="number" value="5" step="0.1" v-model="currentPhone.operatingSystemVersion" /></td>
+                    <td><input type="number" value="5" step="0.1" min="0" v-model="currentPhone.operatingSystemVersion" /></td>
                 </tr>
                 <tr>
                     <th>Procesor</th>
@@ -140,19 +140,19 @@
                 </tr>
                 <tr>
                     <th>Zegar procesora [GHz]</th>
-                    <td><input type="number" value="1,5" step="0.01" v-model="currentPhone.cpuGHz"></td>
+                    <td><input type="number" value="1.5" step="0.01" min="0" v-model="currentPhone.cpuGHz"></td>
                 </tr>
                 <tr>
                     <th>Rdzenie</th>
-                    <td><input type="number" value="8" v-model="currentPhone.cores"></td>
+                    <td><input type="number" value="8" min="1" v-model="currentPhone.cores"></td>
                 </tr>
                 <tr>
                     <th>Bateria [mAh]</th>
-                    <td><input type="number" value="3000" v-model="currentPhone.batterymAH"></td>
+                    <td><input type="number" value="3000" min="0" v-model="currentPhone.batterymAH"></td>
                 </tr>
                 <tr>
                     <th>Matryca aparatu [MP]</th>
-                    <td><input type="number" value="13" step="0.5" v-model="currentPhone.cameraMP"></td>
+                    <td><input type="number" value="13" step="0.5" min="0" v-model="currentPhone.cameraMP"></td>
                 </tr>
                 <tr>
                     <th>Lampa błyskowa</th>

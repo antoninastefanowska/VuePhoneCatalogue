@@ -36,7 +36,9 @@
             },
 
             remove() {
-                this.database.deleteItem(this.item.id, this.item_type);
+                let result = confirm('Czy na pewno chcesz usunąć element ' + this.item.name + '?');
+                if (result)
+                    this.database.deleteItem(this.item.id, this.item_type);
             }
         }
     }

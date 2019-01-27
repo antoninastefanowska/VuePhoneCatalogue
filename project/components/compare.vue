@@ -50,7 +50,7 @@
                 <td :class="cellClass(phone2, phone1, 'keyboard')">{{phone2.keyboard}}</td>
             </tr>
             <tr v-if="phone1 && phone2">
-                <th>Przekątna ekranu</th>
+                <th>Przekątna ekranu [cale]</th>
                 <td :class="cellClass(phone1, phone2, 'sizeInch')">{{phone1.sizeInch}}</td>
                 <td :class="cellClass(phone2, phone1, 'sizeInch')">{{phone2.sizeInch}}</td>
             </tr>
